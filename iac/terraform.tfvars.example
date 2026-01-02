@@ -1,0 +1,18 @@
+# AWS Configuration
+aws_region  = "us-east-1"
+environment = "dev"
+
+# Project Configuration
+project_name = "cloudops"
+
+# GitHub Configuration
+# Create a CodeStar connection in AWS Console first:
+# AWS Console -> Developer Tools -> Settings -> Connections -> Create connection
+# After creating, copy the ARN here
+github_connection_arn = "arn:aws:codestar-connections:us-east-1:ACCOUNT_ID:connection/CONNECTION_ID"
+
+# Your GitHub repository in format: owner/repo-name
+github_repo = "your-github-username/cloudops"
+
+# Branch to deploy
+github_branch = "main"
