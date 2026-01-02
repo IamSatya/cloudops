@@ -12,7 +12,7 @@ project_name = "cloudops"
 github_connection_arn = "arn:aws:codestar-connections:ap-south-1:471112662115:connection/86a2411e-bbcb-4f31-8736-45da6f4c8629"
 
 # Your GitHub repository in format: owner/repo-name
-github_repo = "https://github.com/IamSatya/cloudops.git"
+github_repo = "IamSatya/cloudops"
 
 # Branch to deploy
 github_branch = "main"
