@@ -1,5 +1,6 @@
 
 version: 0.2
+
 phases:
   install:
     runtime-versions:
@@ -11,7 +12,8 @@ phases:
     commands:
       - npm run build
       - npm run export
-  post_build:
-    commands:
-      - aws s3 sync out/ s3://${S3_BUCKET} --delete
-      - aws cloudfront create-invalidation --distribution-id ${CF_ID} --paths "/*"
+
+artifacts:
+  base-directory: frontend/out
+  files:
+    - "**/*"

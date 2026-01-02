@@ -1,4 +1,9 @@
 
 export default function Home() {
-  return <h1>CloudOps Academy - CI/CD + IaC Live</h1>
+  return (
+    <main style={{ padding: 40 }}>
+      <h1>CloudOps Academy</h1>
+      <p>AWS CodePipeline + CodeBuild + CodeDeploy</p>
+    </main>
+  )
 }

@@ -16,8 +16,8 @@ resource "aws_codepipeline" "frontend" {
   role_arn = aws_iam_role.codepipeline.arn
 
   artifact_store {
-    location = "cloudops-artifacts-bucket"
-    type = "S3"
+    location = "cloudops-artifacts"
+    type     = "S3"
   }
 
   stage {
@@ -31,7 +31,7 @@ resource "aws_codepipeline" "frontend" {
       output_artifacts = ["source"]
       configuration = {
         Owner = "ORG"
-        Repo  = "cloudops-academy-full"
+        Repo  = "cloudops-academy-aws-native"
         Branch = "main"
         OAuthToken = "REPLACE_ME"
       }
@@ -46,9 +46,26 @@ resource "aws_codepipeline" "frontend" {
       owner = "AWS"
       provider = "CodeBuild"
       input_artifacts = ["source"]
+      output_artifacts = ["build_output"]
       version = "1"
       configuration = {
         ProjectName = aws_codebuild_project.frontend.name
+      }
+    }
+  }
+
+  stage {
+    name = "Deploy"
+    action {
+      name = "CodeDeploy"
+      category = "Deploy"
+      owner = "AWS"
+      provider = "CodeDeploy"
+      input_artifacts = ["build_output"]
+      version = "1"
+      configuration = {
+        ApplicationName = aws_codedeploy_app.frontend.name
+        DeploymentGroupName = "default"
       }
     }
   }

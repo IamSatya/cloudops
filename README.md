@@ -1,10 +1,11 @@
 
-# CloudOps Academy – Full CI/CD + IaC
+# CloudOps Academy – AWS Native CI/CD
 
-This repo provisions:
-- S3 + CloudFront (frontend hosting)
-- CodeBuild project
-- CodePipeline pipeline
-- Fully automated deployment on git push
+Fully automated pipeline using:
+- CodePipeline
+- CodeBuild
+- CodeDeploy
+- Terraform
+- S3 + CloudFront
 
 Replace GitHub org/repo/token before apply.
