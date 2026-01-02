@@ -1,2 +1,13 @@
 
-module.exports = { output: "export" };
+module.exports = { 
+  output: "export",
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+    unoptimized: true
+  }
+};
