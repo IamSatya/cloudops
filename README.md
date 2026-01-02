@@ -1,8 +1,10 @@
 
-# CloudOps Academy – Frontend DevOps POC
+# CloudOps Academy – Full CI/CD + IaC
 
-This repository demonstrates:
-- Next.js frontend
-- AWS S3 + CloudFront hosting
-- CI/CD with CodePipeline & CodeBuild
-- Infrastructure as Code using Terraform
+This repo provisions:
+- S3 + CloudFront (frontend hosting)
+- CodeBuild project
+- CodePipeline pipeline
+- Fully automated deployment on git push
+
+Replace GitHub org/repo/token before apply.

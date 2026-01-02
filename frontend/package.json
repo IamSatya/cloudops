@@ -3,7 +3,6 @@
   "name": "cloudops-academy-frontend",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
     "export": "next export"
   },

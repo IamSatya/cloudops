@@ -1,8 +1,2 @@
 
-{
-  "compilerOptions": {
-    "jsx": "preserve",
-    "module": "esnext",
-    "target": "es6"
-  }
-}
+{ "compilerOptions": { "jsx": "preserve" } }
